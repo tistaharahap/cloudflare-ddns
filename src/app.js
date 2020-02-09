@@ -38,6 +38,4 @@ const ddns = Rx.Observable.interval(interval)
   })
   .do(ip => console.log(`Subdomain ${env.CLOUDFLARE_DNS_SUBDOMAIN} DNS records is updated to ${ip}`))
 
-ddns.subscribe(
-  () => console.log('Done. Sleeping until the next interval..')
-)
+ddns.subscribe(() => console.log('Done. Sleeping until the next interval..'))
